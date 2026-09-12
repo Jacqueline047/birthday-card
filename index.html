@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生日快乐</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:"Microsoft Yahei",sans-serif;}
+        body{
+            background:#fff7f9;
+            color:#444;
+            min-height:100vh;
+            overflow-x:hidden;
+        }
+        .card{
+            max-width:600px;
+            margin:0 auto;
+            background:#ffffff;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 8px 24px #ffd6e0;
+            opacity:0;
+            transform: translateY(20px);
+            animation: showCard 2s ease forwards;
+            animation-delay:1.5s;
+        }
+        h1{
+            color:#ff6b81;
+            text-align:center;
+            margin-bottom:30px;
+        }
+        p{margin-bottom:16px;font-size:17px;}
+        .sign{
+            margin-top:40px;
+            text-align:right;
+            color:#ff8899;
+        }
+        /* 照片样式 */
+        .photo{
+            width:100%;
+            border-radius:12px;
+            margin:20px 0;
+            object-fit:cover;
+        }
+        /* 气球飘落动画 */
+        .balloon{
+            position:fixed;
+            bottom:-120px;
+            width:60px;
+            animation: rise 12s linear infinite;
+        }
+        @keyframes rise{
+            0%{transform: translateY(0) rotate(0deg);opacity:0.8;}
+            100%{transform: translateY(-110vh) rotate(15deg);opacity:0;}
+        }
+        @keyframes showCard{
+            to{opacity:1;transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+    <!-- 气球动画 -->
+    <div class="balloon" style="left:10%;animation-delay:0s;">🎈</div>
+    <div class="balloon" style="left:25%;animation-delay:2s;">🎈</div>
+    <div class="balloon" style="left:40%;animation-delay:4s;">🎈</div>
+    <div class="balloon" style="left:55%;animation-delay:1s;">🎈</div>
+    <div class="balloon" style="left:70%;animation-delay:3s;">🎈</div>
+    <div class="balloon" style="left:85%;animation-delay:5s;">🎈</div>
+
+    <div class="card">
+        <h1>🎂 Happy Birthday！！！</h1>
+        <!-- 👇这里插入合照，把引号内替换成图片链接 -->
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/Iobmf8wI.jpg" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/gEcRaGvz.jpg" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/XTFXmY51.jpg" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/nrupL3lB.jpg" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/2tQXVuYJ.jpg" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/is1wDiaT.png" alt="我们的合照">
+        <img class="photo" src="https://s3.bmp.ovh/2026/09/12/clgC8wgF.jpg" alt="我们的合照">
+        <p>亲爱的肖总：</p>
+        <p>生日快乐呀，时间真的过的很快。这句话我也说了很多遍了，时间过得很快，或许是离开了那一个环境，离开了我们经常一起上课一起吃饭，周末或者其他有空的时候一起出去玩的时光，回忆才变得越来越珍贵和清晰，就像我跟你说过的，快要毕业的那一阶段，我老是想到大一，我在铺床，看到你穿着树莓红泡泡袖上衣，扎着马尾进来的画面，很清晰，我忘记我们说什么了，但是我知道，那一定是一个很好的开始。
+              没想到吧，这次是以这样的方式来写一小封信给你，找豆包学的，还是有点小简陋。不知道会不会过期，应该不会吧（心虚）每次真正要开始写的时候又不知道说啥，晚上睡觉前想到可多要说的了...但是其实，想说的还是很谢谢你，或者说我很幸运能有你这么一个朋友。我其实是一个很拧巴的人，对不熟的人是这样，最开始我对你也是这样，就像你每次送我点什么东西我就想着要还回去，每次想请你帮个忙也要纠结半天。但是后来不会了，因为你跟我说过我这样做是会把关系好的人推远的，你可是我唯二的好朋友，我可不允许关系推远。就算以后不在同一个城市，也在节假日多见面吧，在微信聊天和当面聊天肯定还是不一样的。
+              哎，真的对时间毫无还手之力啊，想到大学的时候真的是很快乐，虽然我总是抱怨狗学校狗大学，狗都不读，但是我还是很怀念那一段时光的。现在毕业了，我们都在新的起点上，前路是广阔的，一起在各自的领域里发光发热吧！
+              最后是一些小小祝福，在生日的时候，在贺卡上写下的愿望可能会更灵验吧：祝愿肖婷身体健康，万事顺意；祝愿你一直有良好的睡眠，向前的勇气；最后愿岁并谢，与长友兮🎂</p>
+        <p class="sign">李思琪<br>2026.9.20</p>
+    </div>
+</body>
+</html>
